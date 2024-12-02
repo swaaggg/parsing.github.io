@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сообщение</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+        .top-line {
+            background-color: #056371; 
+            color: #fff; 
+            padding: 20px;
+            text-align: left;
+            font-weight: bold;
+            width: 100%;
+            box-sizing: border-box;
+            height: 60px; 
+            display: flex; 
+            align-items: center; 
+            position: fixed; 
+            top: 0; 
+            z-index: 1000; 
+            left: 0; 
+        }
+        .top-line a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .survey-form {
+            background-color: #056371;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 80px; 
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .survey-form label {
+            display: block;
+            margin-top: 10px;
+            color: #ffffff;
+        }
+        .survey-form input[type="text"],
+        .survey-form input[type="email"],
+        .survey-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .survey-form textarea {
+            height: 150px;
+        }
+        .survey-form button {
+            background-color: #1f1f1f;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .survey-form button:hover {
+            background-color: #041c28;
+        }
+    </style>
+</head>
+<body>
+  <div class="top-line">
+    <a href="index.html">Главная страница</a>
+  </div>
+  
+  <div class="survey-form">
+      <h1 style="color: #fff;"> Свяжитесь с нами</h1>
+      <form action="https://aftterdark.github.io/addasakdk.github.io/submit_form.html" method="post" enctype="multipart/form-data">  
+          <label for="id_name">Ваше имя:</label>
+          <input type="text" id="id_name" name="name" required>
+          <label for="id_email">Ваш Email:</label>
+          <input type="email" id="id_email" name="email" required>
+          <label for="id_message">Сообщение:</label>
+          <textarea id="id_message" name="message" required></textarea>
+          <button type="submit">Отправить</button>
+      </form>
+  </div>
+</body>
+</html>
