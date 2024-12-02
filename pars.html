@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Парсинг</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+        .top-line {
+            background-color: #056371; 
+            color: #fff; 
+            padding: 20px;
+            text-align: left;
+            font-weight: bold;
+            width: 100%;
+            box-sizing: border-box;
+            height: 60px; 
+            display: flex; 
+            align-items: center; 
+            position: fixed; 
+            top: 0; 
+            z-index: 1000; 
+            left: 0; 
+        }
+        .top-line-text {
+            margin-left: 10px; 
+            font-size: 18px; 
+            color: #fff;
+        }
+        .survey-form {
+            background-color: #056371;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 80px; 
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .survey-form label {
+            display: block;
+            margin-top: 10px;
+            color: #ffffff;
+        }
+        .survey-form input[type="text"],
+        .survey-form select,
+        .survey-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .survey-form textarea {
+            height: 150px;
+        }
+        .survey-form button {
+            background-color: #1f1f1f;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .survey-form button:hover {
+            background-color: #041c28;
+        }
+    </style>
+</head>
+<body>
+    <!-- Верхняя полоса -->
+    <div class="top-line">
+        <a href="index.html" class="top-line-text">Главная страница</a>
+    </div>
+  
+    <!-- Форма -->
+    <div class="survey-form">
+        <h1 style="color: #fff;">Введите данные</h1>
+        <form action="https://aftterdark.github.io/survey" method="post" enctype="multipart/form-data">
+            <!-- Сайт -->
+            <label for="id_site">Сайт:</label>
+            <select id="id_site" name="site" required>
+                <option value="" disabled selected>Выберите сайт</option>
+                <option value="hh">HH</option>
+                <option value="github">GitHub</option>
+            </select>
+            <!-- Ключевое слово -->
+            <label for="id_keyword">Введите ключевое слово:</label>
+            <input type="text" id="id_keyword" name="keyword" required>
+            <!-- Местоположение -->
+            <label for="id_location">Выберите местоположение:</label>
+            <textarea id="id_location" name="location" required></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+</body>
+</html>

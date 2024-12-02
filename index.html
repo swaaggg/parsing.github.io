@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .top-line {
+            background-color: #056371; 
+            color: #fff; 
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            position: fixed; 
+            top: 0; 
+            width: 100%;
+            z-index: 1000; 
+            height: 60px; 
+        }
+
+        .top-line a {
+            position: absolute;
+            top: 8px;
+            background-color: #0e0d0d;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .main-page {
+            left: 20px;
+        }
+
+        .rezume {
+            right: 20px;
+        }
+
+        .vakansii {
+            right: 160px;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 100vh;
+            padding-top: 80px; /* Отступ для верхней полосы */
+        }
+
+        .main-title {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #056371;
+        }
+
+        .sub-text {
+            font-size: 24px;
+            color: #333;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Верхняя полоса -->
+    <div class="top-line">
+        <a href="index.html" class="main-page">Главная страница</a>
+        <a href="сontact.html" class="rezume">Контакты</a>
+        <a href="pars.html" class="vakansii">Форма</a>
+    </div>
+
+    <!-- Центральный блок с текстом -->
+    <div class="main-content">
+        <div class="main-title">Добро пожаловать на сайт</div>
+        <div class="sub-text">
+            На этом сайте вы можете воспользоваться парсером данных для разных платформ, таких как HH и GitHub.
+        </div>
+    </div>
+</body>
+</html>
